@@ -3,74 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        table,th,td,tr{
-            border: 1px solid black;
-            height: 50px;
-            width: 700px;
-        }
-        td{
-            text-align: center;
-        }
-        th:hover{
-            background-color: black;
-            color: white;
-            font-size: large;
-        }
-        a{
-            text-decoration: none;
-            color: black;
-        }
-    </style>
+    <title>Sign up / Login page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table>
-        <tr>
-            <th colspan="6">timetable</th>
-        </tr>
-        <tr>
-            <th rowspan="6"> hours</th>
-            <th>mon</th>
-            <th>tue</th>
-            <th>wed</th>
-            <th>thu</th>
-            <th>fri</th>
-        </tr>
-        <tr>
-            <td><a href="science.html" >science</a></td>
-            <td><a href="math.html" >maths</a></td>
-            <td><a href="science.html">science</a></td>
-            <td><a href="math.html">maths</a></td>
-            <td><a href="">arts</a></td>
-        </tr>
-        <tr>
-            <td><a href="social.html">social</a></td>
-            <td><a href="english.html">english</a></td>
-            <td><a href="hindi.html">hindi</a></td>
-            <td><a href="social.html">social</a></td>
-            <td>sports</td>
-        </tr>
-        <tr>
-            <th colspan="5">lunch</th>
-        </tr>
-        <tr>
-            <td><a href="science.html">science</a></td>
-            <td><a href="math.html">maths</a></td>
-            <td><a href="science.html">science</a></td>
-            <td><a href="math.html">maths</a></td>
-            <td rowspan="2"><a href="project.html">project</a></td>
-        </tr>
-        <tr>
-            <td><a href="social.html">social</a></td>
-            <td><a href="english.html">english</a></td>
-            <td><a href="hindi.html">hindi</a></td>
-            <td><a href="social.html">social</a></td>
+    <div class="login_container">
+        <div class="login_left">
+            <div class="meri">
+                <i id="ic2" class="fa-solid fa-less-than"></i>
+                
+            </div>
+            <div class="leri">
+                <i id="ic1" class="fa-solid fa-greater-than"></i>
+            </div>
+                <img src="https://img.freepik.com/premium-vector/customer-service-representative-working-laptop-with-headset_1305385-80877.jpg" class="slider" alt="">
+                <img src="https://media.istockphoto.com/id/1366023601/photo/cropped-shot-of-an-attractive-young-female-call-center-agent-working-in-her-office.jpg?s=612x612&w=0&k=20&c=qvv5Fnh0eE5S0n8ARf0ZTqfFPGSs-nX41xnGsABfOZg=" class="slider" alt="">
+                <img src="https://img.freepik.com/premium-photo/customer-support-team-providing-assistance-from-modern-call-center-daytime-hours_1143476-3349.jpg?semt=ais_hybrid" class="slider" alt="">
             
-        </tr>
-
-
-
-    </table>
+        </div>
+        <div class="login_right">
+            <div class="login_btn">
+                <button id="login-btn" class="toggle-btn">Login</button>
+                <button id="signup-btn" class="toggle-btn">Sign Up</button>
+            </div>
+            <div class="loginUser">
+                <button id="user-btn" class="active-btn">User</button>
+                <button id="agent-btn" class="active-btn">Agent</button>
+            </div>
+            <form id="login-form" class="form " onSubmit={handleSubmit}>
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" class="login-email">
+                <br> 
+                <input type="password" placeholder="password" class="login-pass">
+                <br> 
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+            <form id="signup-form" class="form hidden">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" id="signup-btn" class="btn-login">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
